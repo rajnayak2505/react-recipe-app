@@ -1,19 +1,179 @@
+.header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2C003E;
+}
+
+.header .logo img{
+  width:50px;
+}
+
+.header ul{
+  list-style: none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header ul li{
+  margin:0 10px;
+  font-size:20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.header ul li:hover{
+  color: #FC346E;
+}
+
 .App {
   text-align: center;
+  background-color: #CDDCDC;
+ background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+ background-blend-mode: screen, overlay;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.App .search-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.search-form .search-bar {
+  width: 95%;
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+  border-radius: 5px 0 0 5px;
+  border: 1px solid gray;
+  height: 27px;
+  font-size: 18px;
+  padding: 5px;
+  outline: none;
+  border-bottom: 4px solid #2C003E;
+  border-right: none;
+}
+
+.search-form .search-button{
+  height: 38px;
+  width: 23%;
+  border: 0;
+  box-shadow: 0 4px 0 #2C003E;
+  background-color: #FC346E;
+  transition: all 150ms;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.search-form .search-button:hover{
+  box-shadow: 0 4px 0 #FC346E;
+  background-color: #2C003E;
+}
+
+.item-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.related-recipe{
+  display: flex;
+  justify-content:space-between;
+}
+
+.related-recipe li{
+  width:33%;
+  height:200px;
+}
+
+.item-container .recipe {
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    /* margin-bottom: 30px; */
+    display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ background-blend-mode: screen;
+}
+
+
+.item-container-recipe {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+
+.item-container-recipe .recipe{
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 33%;
+    height: 100%;
+    margin-bottom: 30px;
+    display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ background-blend-mode: screen;
+}
+
+
+.item-container a{
+  display: block;
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 31%;
+    margin-bottom: 30px;
+    display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ background-blend-mode: screen;
+}
+
+.item-container .recipe ul{
+  text-align: left;
+}
+
+
+.item-container img{
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 8px 8px;
+}
+
+.item-container h1{
+  font-size: 23px;
+}
+
+
+@media (max-width: 768px){
+  .item-container .recipe{
+    width: 48%;
   }
 }
 
-.App-header {
+@media (max-width: 414px){
+  .item-container .recipe{
+    width: 98%;
+  }
+}
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -35,4 +195,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
